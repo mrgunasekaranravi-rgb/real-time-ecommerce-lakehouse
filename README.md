@@ -264,3 +264,103 @@ Customer source data is generated using PySpark with an explicit schema and load
 The generated source datasets are persisted as Delta Lake tables in Databricks for downstream Bronze layer ingestion and processing.
 
 ![Delta Table Creation](screenshots/02_delta_table_creation.png)
+
+### Bronze Layer
+
+Raw source data is ingested into the Bronze layer and validated before downstream processing.
+
+![Bronze Ingestion](screenshots/03_bronze_ingestion.png)
+
+![Bronze Validation](screenshots/04_bronze_validation.png)
+
+### Silver Layer
+
+Bronze data is cleaned, standardized, deduplicated, and transformed into validated Silver datasets.
+
+![Silver Transformation](screenshots/05_silver_transformation.png)
+
+![Silver Validation](screenshots/06_silver_validation.png)
+
+### CDC & Incremental Processing
+
+Delta Lake MERGE is used to process incremental changes efficiently while supporting idempotent pipeline execution.
+
+![CDC Delta Merge](screenshots/07_cdc_delta_merge.png)
+
+![CDC Merge Results](screenshots/08_cdc_merge_results.png)
+
+![CDC Idempotency Validation](screenshots/09_cdc_idempotency_validation.png)
+
+### SCD Type 2 — Historical Dimension Tracking
+
+Slowly Changing Dimension Type 2 is implemented to preserve historical customer changes while maintaining the current version of each dimension record.
+
+![SCD Type 2 Initialization](screenshots/10_scd2_dimension_initialization.png)
+
+![SCD Type 2 Version Update](screenshots/11_scd2_version_update.png)
+
+![SCD Type 2 Customer History](screenshots/12_scd2_customer_history.png)
+
+### Gold Layer — Business Analytics
+
+Curated Gold datasets provide business-ready fact tables, aggregations, and analytical outputs.
+
+![Gold Fact Sales](screenshots/13_gold_fact_sales.png)
+
+![Gold Top Products](screenshots/14_gold_top_products.png)
+
+![Gold Layer Validation](screenshots/15_gold_layer_validation.png)
+
+### Data Quality Framework
+
+Reusable data quality rules validate pipeline outputs and identify invalid records for quarantine instead of allowing bad data into downstream analytical datasets.
+
+![Data Quality Rules - Part 1](screenshots/16_data_quality_rules1.png)
+
+![Data Quality Rules - Part 2](screenshots/16_data_quality_rules2.png)
+
+![Data Quality Rules - Part 3](screenshots/16_data_quality_rules3.png)
+
+![Invalid Records Quarantine](screenshots/17_invalid_records_quarantine.png)
+
+![Data Quality Summary](screenshots/18_data_quality_summary.png)
+
+### Audit & Monitoring
+
+Operational observability captures pipeline execution metrics, audit history, and monitoring information for production-style tracking.
+
+![Audit Run Metrics](screenshots/19_audit_run_metrics.png)
+
+![Pipeline Audit History](screenshots/20_pipeline_audit_history.png)
+
+![Monitoring Summary](screenshots/21_monitoring_summary.png)
+
+### Performance Optimization
+
+Spark and Delta Lake optimization techniques are applied to improve query and storage performance.
+
+![Photon Query Optimization](screenshots/22_photon_query_optimization.png)
+
+![Delta Optimize Compaction](screenshots/23_delta_optimize_compaction.png)
+
+![Performance Optimization Summary](screenshots/24_performance_optimization_summary.png)
+
+### Pipeline Orchestration & Readiness
+
+Pipeline stages are registered and validated to confirm that the complete Lakehouse workflow is ready for end-to-end execution.
+
+![Pipeline Stage Registry](screenshots/25_pipeline_stage_registry.png)
+
+![Pipeline Table Readiness](screenshots/26_pipeline_table_readiness.png)
+
+![Pipeline Readiness Status](screenshots/27_pipeline_readiness_status.png)
+
+### Final Project Validation
+
+Final reconciliation and technical validation confirm consistency across the Lakehouse layers and verify the completed project outputs.
+
+![Bronze Silver Reconciliation](screenshots/28_bronze_silver_reconciliation.png)
+
+![Final Technical Validation](screenshots/29_final_technical_validation.png)
+
+![Project Validation Summary](screenshots/30_project_validation_summary.png)
