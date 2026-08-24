@@ -11,6 +11,18 @@ A production-style end-to-end Data Engineering project built using Databricks, P
 
 The project demonstrates how raw e-commerce data can be ingested, transformed, incrementally processed, modeled, validated, monitored, optimized, and orchestrated through a modern Lakehouse architecture.
 
+## Project Highlights
+
+- Built an end-to-end Lakehouse pipeline using Databricks, PySpark, and Delta Lake
+- Implemented Bronze, Silver, and Gold layers using Medallion Architecture
+- Designed CDC and incremental data processing for efficient data updates
+- Implemented SCD Type 2 for historical dimension tracking
+- Built business-ready Gold layer aggregations for analytics
+- Developed reusable data quality checks and quarantine handling
+- Added audit logging and pipeline monitoring for observability
+- Applied Delta Lake and Spark performance optimization techniques
+- Created end-to-end pipeline orchestration and final validation
+
 ## Architecture
 
 ![Real-Time E-Commerce Lakehouse Architecture](architecture.png)
