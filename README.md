@@ -11,6 +11,12 @@ A production-style end-to-end Data Engineering project built using Databricks, P
 
 The project demonstrates how raw e-commerce data can be ingested, transformed, incrementally processed, modeled, validated, monitored, optimized, and orchestrated through a modern Lakehouse architecture.
 
+## Business Use Case
+
+An e-commerce company receives continuous data from orders, customers, products, and transactions. The goal of this project is to build a scalable Lakehouse pipeline that transforms raw operational data into reliable, analytics-ready datasets.
+
+The solution supports incremental data processing, historical customer tracking, data quality validation, business aggregations, audit monitoring, and optimized analytical workloads.
+
 ## Project Highlights
 
 - Built an end-to-end Lakehouse pipeline using Databricks, PySpark, and Delta Lake
