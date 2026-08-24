@@ -44,6 +44,22 @@ Source Data
 → Performance Optimization
 → Pipeline Orchestration
 
+## End-to-End Data Flow
+
+The pipeline processes e-commerce data through multiple Lakehouse stages:
+
+1. **Source Generation** — Simulates raw e-commerce data for customers, products, orders, and transactions.
+2. **Bronze Layer** — Ingests raw source data into Delta tables while preserving the original structure.
+3. **Silver Layer** — Cleans, standardizes, validates, and deduplicates the Bronze data.
+4. **CDC & Incremental Processing** — Processes only new or changed records instead of reprocessing the complete dataset.
+5. **SCD Type 2** — Maintains historical changes in dimension data for analytical tracking.
+6. **Gold Layer** — Creates business-ready dimensions, facts, and aggregated datasets.
+7. **Data Quality** — Validates nulls, duplicates, business rules, and referential integrity while quarantining invalid records.
+8. **Audit & Monitoring** — Captures pipeline execution status, row counts, duration, and error information.
+9. **Performance Optimization** — Applies Delta Lake and Spark optimization techniques for efficient processing.
+10. **Pipeline Orchestration** — Coordinates the complete end-to-end execution flow.
+11. **Project Validation** — Performs final validation of the Lakehouse pipeline and generated datasets.
+
 ## Tech Stack
 
 - Databricks
