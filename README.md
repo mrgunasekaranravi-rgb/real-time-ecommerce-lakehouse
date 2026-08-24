@@ -1,5 +1,12 @@
 # Real-Time E-Commerce Lakehouse
 
+![Databricks](https://img.shields.io/badge/Databricks-Lakehouse-FF3621?logo=databricks&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-PySpark-E25A1C?logo=apachespark&logoColor=white)
+![Delta Lake](https://img.shields.io/badge/Delta%20Lake-Delta-00ADD8)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Medallion-blue)
+![Status](https://img.shields.io/badge/Project-Completed-success)
+
 A production-style end-to-end Data Engineering project built using Databricks, PySpark, Delta Lake, and Medallion Architecture.
 
 The project demonstrates how raw e-commerce data can be ingested, transformed, incrementally processed, modeled, validated, monitored, optimized, and orchestrated through a modern Lakehouse architecture.
