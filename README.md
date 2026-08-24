@@ -6,6 +6,8 @@ The project demonstrates how raw e-commerce data can be ingested, transformed, i
 
 ## Architecture
 
+![Real-Time E-Commerce Lakehouse Architecture](architecture.png)
+
 Source Data
 → Bronze Layer
 → Silver Layer
