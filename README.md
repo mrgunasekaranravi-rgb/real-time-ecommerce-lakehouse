@@ -246,3 +246,20 @@ Run the project notebooks in the following sequence:
 The first notebook initializes the project environment and generates the e-commerce source datasets. Subsequent notebooks progressively build the Bronze, Silver, CDC/SCD, Gold, Data Quality, Monitoring, Optimization, and Orchestration layers.
 
 For a complete end-to-end execution, run `10_Pipeline_Orchestration.py` after the required setup has been completed, then use `11_Project_Validation.py` to validate the final Lakehouse datasets and pipeline outputs.
+
+
+## Execution Evidence
+
+The following screenshots demonstrate successful execution of the project in Databricks.
+
+### Source Data Generation
+
+Customer source data is generated using PySpark with an explicit schema and loaded into a Spark DataFrame.
+
+![Source Customer Generation](screenshots/01_source_customer_generation.png)
+
+### Delta Lake Source Tables
+
+The generated source datasets are persisted as Delta Lake tables in Databricks for downstream Bronze layer ingestion and processing.
+
+![Delta Table Creation](screenshots/02_delta_table_creation.png)
