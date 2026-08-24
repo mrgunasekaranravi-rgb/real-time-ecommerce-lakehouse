@@ -215,3 +215,34 @@ Performance Optimization
    |
    v
 Validation
+
+## How to Run
+
+This project is designed to run in a Databricks environment using PySpark and Delta Lake.
+
+### Prerequisites
+
+- Databricks workspace
+- Apache Spark / PySpark
+- Delta Lake
+- Python 3.x
+
+### Execution Order
+
+Run the project notebooks in the following sequence:
+
+1. `01_Setup_and_Source_Generation.py`
+2. `02_Bronze_Ingestion.py`
+3. `03_Silver_Transformation.py`
+4. `04_CDC_Incremental_Processing.py`
+5. `05_SCD_Type2_Dimensions.py`
+6. `06_Gold_Business_Aggregations.py`
+7. `07_Data_Quality_Framework.py`
+8. `08_Audit_Monitoring.py`
+9. `09_Performance_Optimization.py`
+10. `10_Pipeline_Orchestration.py`
+11. `11_Project_Validation.py`
+
+The first notebook initializes the project environment and generates the e-commerce source datasets. Subsequent notebooks progressively build the Bronze, Silver, CDC/SCD, Gold, Data Quality, Monitoring, Optimization, and Orchestration layers.
+
+For a complete end-to-end execution, run `10_Pipeline_Orchestration.py` after the required setup has been completed, then use `11_Project_Validation.py` to validate the final Lakehouse datasets and pipeline outputs.
