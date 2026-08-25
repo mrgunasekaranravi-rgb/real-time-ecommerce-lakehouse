@@ -6,6 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![Architecture](https://img.shields.io/badge/Architecture-Medallion-blue)
 ![Status](https://img.shields.io/badge/Project-Completed-success)
+[![Python CI](https://github.com/mrgunasekaranravi-rgb/real-time-ecommerce-lakehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/mrgunasekaranravi-rgb/real-time-ecommerce-lakehouse/actions/workflows/ci.yml)
 
 A production-style end-to-end Data Engineering project built using Databricks, PySpark, Delta Lake, and Medallion Architecture.
 
